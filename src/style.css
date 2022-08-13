@@ -13,3 +13,12 @@
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 }
+
+a {
+  text-decoration: none;
+  color: #1e40af;
+}
+
+a:hover {
+  text-decoration: underline;
+}

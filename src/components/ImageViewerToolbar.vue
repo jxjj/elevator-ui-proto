@@ -10,6 +10,7 @@
         href="https://dcl.elevator.umn.edu/asset/viewAsset/57e31b217d58ae5d4ce734f3#57e31c447d58ae793de734fa"
         label="More Info"
         icon="info"
+        class="text-neutral-400"
       ></IconButton>
       <IconButton label="Download" icon="download" />
       <IconButton label="Share" icon="google_plus_reshare" />

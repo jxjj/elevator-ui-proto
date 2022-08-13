@@ -4,13 +4,13 @@
     :class="{
       'bg-neutral-50': color === 'light',
       'bg-neutral-300': color === 'gray',
-      'bg-neutral-800': color === 'dark',
+      'drawer--color-dark bg-neutral-800': color === 'dark',
     }"
   >
     <header
       class="sideways flex gap-16 items-center justify-start p-4 whitespace-nowrap cursor-pointer bg-transparent-black-100"
       :class="{
-        'invert backdrop-invert': color === 'dark',
+        invert: color === 'dark',
       }"
       aria-role="button"
       @click="isOpen = !isOpen"
@@ -77,4 +77,8 @@ withDefaults(
 
 const isOpen = ref(false);
 </script>
-<style scoped></style>
+<style>
+.drawer--color-dark img {
+  filter: invert(1);
+}
+</style>

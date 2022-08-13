@@ -10,7 +10,7 @@
           class="block object-cover w-full"
         />
       </ImageViewer>
-      <Drawer class="app__drawer-1" color="dark" label="Object Details">
+      <Drawer label="Object Details" color="dark">
         <Tuple label="Type of View">Exterior</Tuple>
         <Tuple label="Keywords" class="flex gap-1 flex-wrap mt-2">
           <Chip
@@ -45,31 +45,54 @@
         </Tuple>
         <Tuple label="Copyright Status" />
         <Tuple label="File">
-          <ThumbnailImage
-            src="/gehry-residence.jpg"
-            alt="Frank Gehry Residence thumbnail image"
-            href="https://dcl.elevator.umn.edu/asset/viewAsset/57e31b217d58ae5d4ce734f3#57e31c447d58ae793de734fa"
-          />
+          <div class="grid grid-cols-2 gap-4 items-center justify-start">
+            <ThumbnailImage
+              src="/gehry-residence.jpg"
+              alt="Frank Gehry Residence thumbnail image"
+              href="https://dcl.elevator.umn.edu/asset/viewAsset/57e31b217d58ae5d4ce734f3#57e31c447d58ae793de734fa"
+            />
+            <ThumbnailImage
+              src="/gehry-residence.jpg"
+              alt="Frank Gehry Residence thumbnail image"
+              href="https://dcl.elevator.umn.edu/asset/viewAsset/57e31b217d58ae5d4ce734f3#57e31c447d58ae793de734fa"
+            />
+            <ThumbnailImage
+              src="/gehry-residence.jpg"
+              alt="Frank Gehry Residence thumbnail image"
+              href="https://dcl.elevator.umn.edu/asset/viewAsset/57e31b217d58ae5d4ce734f3#57e31c447d58ae793de734fa"
+            />
+          </div>
         </Tuple>
         <Tuple label="Media Type">image</Tuple>
         <Tuple label="Digital ID">CSCL001875</Tuple>
       </Drawer>
 
-      <Drawer class="app__drawer-2" color="light" label="Gehry Residence">
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam
-          doloremque, vel commodi maiores est, architecto quod quisquam quia
-          repellat cupiditate nihil, unde libero dignissimos dolore earum
-          numquam consequatur harum ullam.
-        </p>
+      <Drawer label="Gehry Residence" color="light">
+        <Tuple label="Creator">
+          <Accordion label="Frank Owen Gehry">
+            <Tuple label="Agent"></Tuple>
+            <Tuple label="Display Name">
+              <a
+                href="https://dcl.elevator.umn.edu/search/querySearch/Frank%20Owen%20Gehry"
+                >Frank Owen Gehry</a
+              >
+            </Tuple>
+          </Accordion>
+        </Tuple>
       </Drawer>
-      <Drawer class="app__drawer-3" color="gray" label="More Like This">
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam
-          doloremque, vel commodi maiores est, architecto quod quisquam quia
-          repellat cupiditate nihil, unde libero dignissimos dolore earum
-          numquam consequatur harum ullam.
-        </p>
+      <Drawer label="More Like This" color="gray">
+        <div class="flex flex-col gap-4">
+          <ThumbnailImage
+            src="/gehry-residence.jpg"
+            alt="Gehry Residence"
+            class="w-full"
+          />
+          <ThumbnailImage src="/gehry-residence.jpg" alt="Gehry Residence" />
+
+          <ThumbnailImage src="/gehry-residence.jpg" alt="Gehry Residence" />
+
+          <ThumbnailImage src="/gehry-residence.jpg" alt="Gehry Residence" />
+        </div>
       </Drawer>
     </main>
   </div>
