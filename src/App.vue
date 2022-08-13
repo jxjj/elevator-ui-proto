@@ -2,8 +2,8 @@
   <div class="app default-layout h-screen flex flex-col box-border">
     <UMNHeader class="app__umn-header" />
     <AppHeader class="app__app-header" />
-    <main class="flex flex-1 min-h-0 border-4 border-red-700">
-      <ImageViewer class="app__image-viewer flex">
+    <main class="flex flex-1 min-h-0">
+      <ImageViewer class="app__image-viewer flex flex-1">
         <img
           src="/buddha.jpg"
           alt="Tian Tan Buddha, Hong Kong"
@@ -12,7 +12,7 @@
       </ImageViewer>
       <Drawer
         class="app__drawer-1"
-        color="light"
+        color="dark"
         name="Gandhara Life of the Buddha"
       >
         <h1>Gandhara Life of the Buddha</h1>
@@ -38,7 +38,7 @@
       </Drawer>
       <Drawer
         class="app__drawer-3"
-        color="light"
+        color="gray"
         name="Gandhara Life of the Buddha"
       >
         <h1>Gandhara Life of the Buddha</h1>
@@ -62,38 +62,7 @@ defineProps<{}>();
 </script>
 
 <style>
-/* .default-layout {
-  height: 100vh;
-  display: grid;
-  grid-template-areas:
-    "umn-header umn-header umn-header umn-header"
-    "app-header app-header app-header app-header"
-    "viewer drawer-1 drawer-2 drawer-3";
-  grid-template-columns: 3fr 1fr 1fr 1fr;
-  grid-template-rows: min-content min-content minmax(0, 1fr);
-}
-
-.app__umn-header {
-  grid-area: umn-header;
-}
-
-.app__app-header {
-  grid-area: app-header;
-}
-
 .app__image-viewer {
-  grid-area: viewer;
+  min-width: 25vw;
 }
-
-.app__drawer-1 {
-  grid-area: drawer-1;
-}
-
-.app__drawer-2 {
-  grid-area: drawer-2;
-}
-
-.app__drawer-3 {
-  grid-area: drawer-3;
-} */
 </style>
