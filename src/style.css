@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/**
+* text will write vertically from bottom to top
+*/
+.sideways {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}

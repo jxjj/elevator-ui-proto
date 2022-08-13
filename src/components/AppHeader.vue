@@ -5,13 +5,13 @@
       <nav>
         <ul class="flex gap-4">
           <li>
-            <router-link to="/">Home</router-link>
+            <a href="#">Home</a>
           </li>
           <li>
-            <router-link to="/about">About</router-link>
+            <a href="#">Link</a>
           </li>
           <li>
-            <router-link to="/contact">Contact</router-link>
+            <a href="#">Link</a>
           </li>
         </ul>
       </nav>
