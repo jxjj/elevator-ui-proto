@@ -2,15 +2,15 @@
   <div
     class="drawer border-l-2 border-neutral-900 min-h-full flex min-w-0 max-w-md"
     :class="{
-      'bg-neutral-100': color === 'light',
+      'bg-neutral-50': color === 'light',
       'bg-neutral-300': color === 'gray',
-      'bg-neutral-800 text-neutral-300': color === 'dark',
+      'bg-neutral-800': color === 'dark',
     }"
   >
     <header
       class="sideways flex gap-16 items-center justify-start p-4 whitespace-nowrap cursor-pointer bg-transparent-black-100"
       :class="{
-        '': color === 'dark',
+        'invert backdrop-invert': color === 'dark',
       }"
       aria-role="button"
       @click="isOpen = !isOpen"
@@ -35,25 +35,29 @@
             />
           </svg>
         </div>
-        <h1 class="font-bold">{{ name }}</h1>
+        <h1 class="font-bold">{{ label }}</h1>
       </div>
-      <ul class="text-sm flex content-center gap-8">
-        <li>Unknown</li>
-        <li>ca. 2nd century CE</li>
-        <!-- <li>Washington, D.C., Freer Gallery</li> -->
-        <!-- <li>Pakistani</li> -->
-        <!-- <li>Carving</li> -->
+      <ul v-if="details" class="text-sm flex content-center gap-8">
+        <li v-for="(item, i) in details" :key="i">{{ item }}</li>
       </ul>
     </header>
-    <div
+
+    <article
       v-if="isOpen"
-      class="prose p-4 prose-neutral"
+      class="p-4 overflow-y-auto"
       :class="{
-        'dark:prose-invert': color === 'dark',
+        invert: color === 'dark',
       }"
     >
-      <slot />
-    </div>
+      <h1
+        class="mt-8 pt-6 text-3xl font-bold mb-12 text-neutral-900 relative before:block before:w-12 before:h-2 before:bg-neutral-900 before:absolute before:top-0"
+      >
+        {{ label }}
+      </h1>
+      <div class="text-neutral-600">
+        <slot />
+      </div>
+    </article>
   </div>
 </template>
 <script setup lang="ts">
@@ -62,10 +66,12 @@ import { ref } from "vue";
 withDefaults(
   defineProps<{
     color: "light" | "dark" | "gray";
-    name: string;
+    label: string;
+    details?: string[];
   }>(),
   {
     color: "gray",
+    details: () => [],
   }
 );
 
