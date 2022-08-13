@@ -10,7 +10,11 @@
           class="block object-cover w-full"
         />
       </ImageViewer>
-      <Drawer label="Object Details" color="dark">
+      <Drawer
+        label="Object Details"
+        :details="['Exterior', '1991', 'image', 'CSCL001875']"
+        color="dark"
+      >
         <Tuple label="Type of View">Exterior</Tuple>
         <Tuple label="Keywords" class="flex gap-1 flex-wrap mt-2">
           <Chip
@@ -45,7 +49,114 @@
         </Tuple>
         <Tuple label="Copyright Status" />
         <Tuple label="File">
-          <div class="grid grid-cols-2 gap-4 items-center justify-start">
+          <ThumbnailImage
+            src="/gehry-residence.jpg"
+            alt="Frank Gehry Residence thumbnail image"
+            class="relative"
+          >
+            <IconButton
+              icon="download"
+              label="Download Image"
+              class="absolute bottom-0 right-0 z-10"
+              @click="downloadImage"
+            />
+          </ThumbnailImage>
+        </Tuple>
+        <Tuple label="Media Type">image</Tuple>
+        <Tuple label="Digital ID">CSCL001875</Tuple>
+      </Drawer>
+
+      <Drawer
+        label="Gehry Residence"
+        :details="[
+          'Frank Owen Gehry',
+          '1977',
+          'Western: North America : North America : United States: 1945-Present : 1980s',
+        ]"
+        color="light"
+      >
+        <Tuple label="Creator">
+          <Accordion label="Frank Owen Gehry">
+            <Tuple label="Agent"></Tuple>
+            <Tuple label="Display Name">
+              <a
+                href="https://dcl.elevator.umn.edu/search/querySearch/Frank%20Owen%20Gehry"
+                >Frank Owen Gehry</a
+              >
+            </Tuple>
+            <Tuple label="Altnernate Name"
+              >Frank O. Gehry; Frank Goldberg</Tuple
+            >
+            <Tuple label="Birth Date">1929</Tuple>
+            <Tuple label="Country of Birth">Canada</Tuple>
+            <Tuple label="Country Active">United States</Tuple>
+            <Tuple label="Nationality">American, Canadian</Tuple>
+            <Tuple label="Role">Architect</Tuple>
+          </Accordion>
+        </Tuple>
+
+        <Tuple label="Date / Location">
+          <Accordion label="1977">
+            <Tuple label="Type">Construction</Tuple>
+            <Tuple label="Earliest Date">1977</Tuple>
+            <Tuple label="Latest Date">1994</Tuple>
+            <Tuple label="Begin Century">20th century CE</Tuple>
+            <Tuple label="End Century">20th century CE</Tuple>
+            <Tuple label="Greater Location">
+              North and Central America : North America : United States :
+              California
+            </Tuple>
+            <Tuple label="City Site">Santa Monica</Tuple>
+            <Tuple label="Address">
+              <a href="#">1002 22nd Street, Santa Monica, California 90403</a>
+            </Tuple>
+            <Tuple label="Location">
+              <iframe
+                title="Map of Frank Gehry Residence"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.338303777535!2d-118.48692148442593!3d34.03519208061066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bb4ce64c44a9%3A0x363af92fd8aa810a!2sGehry%20Residence%2C%201002%2022nd%20St%2C%20Santa%20Monica%2C%20CA%2090403!5e0!3m2!1sen!2sus!4v1660426179610!5m2!1sen!2sus"
+                width="400"
+                height="300"
+                style="border: 0"
+                allowfullscreen="true"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </Tuple>
+          </Accordion>
+        </Tuple>
+        <Tuple label="Style Period">
+          Western: North America : North America : United States: 1945-Present :
+          1980s
+        </Tuple>
+        <Tuple label="Culture"> American </Tuple>
+        <Tuple label="Classification">Architecture : Dwellings : houses</Tuple>
+        <Tuple label="Views">
+          <div class="grid grid-cols-2 gap-2 items-center justify-start">
+            <ThumbnailImage
+              src="/gehry-residence.jpg"
+              alt="Frank Gehry Residence thumbnail image"
+              href="https://dcl.elevator.umn.edu/asset/viewAsset/57e31b217d58ae5d4ce734f3#57e31c447d58ae793de734fa"
+            />
+            <ThumbnailImage
+              src="/gehry-residence.jpg"
+              alt="Frank Gehry Residence thumbnail image"
+              href="https://dcl.elevator.umn.edu/asset/viewAsset/57e31b217d58ae5d4ce734f3#57e31c447d58ae793de734fa"
+            />
+            <ThumbnailImage
+              src="/gehry-residence.jpg"
+              alt="Frank Gehry Residence thumbnail image"
+              href="https://dcl.elevator.umn.edu/asset/viewAsset/57e31b217d58ae5d4ce734f3#57e31c447d58ae793de734fa"
+            />
+            <ThumbnailImage
+              src="/gehry-residence.jpg"
+              alt="Frank Gehry Residence thumbnail image"
+              href="https://dcl.elevator.umn.edu/asset/viewAsset/57e31b217d58ae5d4ce734f3#57e31c447d58ae793de734fa"
+            />
+            <ThumbnailImage
+              src="/gehry-residence.jpg"
+              alt="Frank Gehry Residence thumbnail image"
+              href="https://dcl.elevator.umn.edu/asset/viewAsset/57e31b217d58ae5d4ce734f3#57e31c447d58ae793de734fa"
+            />
             <ThumbnailImage
               src="/gehry-residence.jpg"
               alt="Frank Gehry Residence thumbnail image"
@@ -63,25 +174,22 @@
             />
           </div>
         </Tuple>
-        <Tuple label="Media Type">image</Tuple>
-        <Tuple label="Digital ID">CSCL001875</Tuple>
-      </Drawer>
-
-      <Drawer label="Gehry Residence" color="light">
-        <Tuple label="Creator">
-          <Accordion label="Frank Owen Gehry">
-            <Tuple label="Agent"></Tuple>
-            <Tuple label="Display Name">
-              <a
-                href="https://dcl.elevator.umn.edu/search/querySearch/Frank%20Owen%20Gehry"
-                >Frank Owen Gehry</a
-              >
-            </Tuple>
-          </Accordion>
+        <Tuple label="Collection">
+          Cultural Studies & Comparative Literature Open Collection
         </Tuple>
       </Drawer>
-      <Drawer label="More Like This" color="gray">
-        <div class="flex flex-col gap-4">
+      <Drawer
+        label="More Like This"
+        :details="[
+          'Loyola Law School',
+          'California Aerospace Museum and Theater',
+          'Indiana Avenue Houses',
+          'Frances Howard Goldwyn - Hollywood Regional Library',
+        ]"
+        color="gray"
+        size="xs"
+      >
+        <div class="flex flex-col gap-2">
           <ThumbnailImage
             src="/gehry-residence.jpg"
             alt="Gehry Residence"
@@ -106,6 +214,11 @@ import Tuple from "./components/Tuple.vue";
 import Chip from "./components/Chip.vue";
 import Accordion from "./components/Accordion.vue";
 import ThumbnailImage from "./components/ThumbnailImage.vue";
+import IconButton from "./components/IconButton.vue";
+
+function downloadImage(event: MouseEvent) {
+  console.log("download");
+}
 </script>
 
 <style>

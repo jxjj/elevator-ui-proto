@@ -1,9 +1,9 @@
 <template>
   <div
-    class="accordion shadow-sm rounded-md overflow-hidden bg-neutral-200 border border-neutral-100"
+    class="accordion shadow-sm rounded-md overflow-hidden bg-neutral-100 border border-neutral-100 w-full"
   >
     <IconButton
-      class="accordion__header flex w-full justify-start items-center p-4 gap-2 flex-row-reverse bg-neutral-300"
+      class="accordion__header flex w-full justify-start items-center p-4 gap-2 flex-row-reverse bg-neutral-200"
       label="expand more"
       icon="expand_more"
       @click="isOpen = !isOpen"

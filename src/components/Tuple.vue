@@ -1,5 +1,5 @@
 <template>
-  <div class="tuple mb-6 mt-4">
+  <div class="tuple mb-6 mt-4 w-full">
     <span
       class="tuple__label text-xs block uppercase text-neutral-500 leading-none mb-1"
       >{{ label }}</span
