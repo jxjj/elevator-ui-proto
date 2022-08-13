@@ -1,9 +1,11 @@
 <template>
-  <div class="app">
-    <header class="app-header">UMN</header>
-  </div>
+  <DefaultLayout>
+    <h1>Hello World</h1>
+  </DefaultLayout>
 </template>
 <script setup lang="ts">
+import DefaultLayout from "./layouts/DefaultLayout.vue";
+
 defineProps<{
   message: string;
 }>();
