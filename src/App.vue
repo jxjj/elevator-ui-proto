@@ -3,7 +3,7 @@
     <UMNHeader class="app__umn-header" />
     <AppHeader class="app__app-header" />
     <main class="flex flex-1 min-h-0">
-      <ImageViewer class="app__image-viewer flex flex-1">
+      <ImageViewer class="app__image-viewer flex w-1/3">
         <img
           src="/gehry-residence.jpg"
           alt="Man Looking Out Window. Print by Robert Gwathmey."
@@ -167,11 +167,6 @@
               alt="Frank Gehry Residence thumbnail image"
               href="https://dcl.elevator.umn.edu/asset/viewAsset/57e31b217d58ae5d4ce734f3#57e31c447d58ae793de734fa"
             />
-            <ThumbnailImage
-              src="/gehry-residence.jpg"
-              alt="Frank Gehry Residence thumbnail image"
-              href="https://dcl.elevator.umn.edu/asset/viewAsset/57e31b217d58ae5d4ce734f3#57e31c447d58ae793de734fa"
-            />
           </div>
         </Tuple>
         <Tuple label="Collection">
@@ -187,19 +182,29 @@
           'Frances Howard Goldwyn - Hollywood Regional Library',
         ]"
         color="gray"
-        size="xs"
+        size="sm"
       >
         <div class="flex flex-col gap-2">
-          <ThumbnailImage
-            src="/gehry-residence.jpg"
-            alt="Gehry Residence"
-            class="w-full"
+          <MediaCard
+            label="Loyola Law School"
+            image="/loyola-law-school.jpg"
+            href="https://dcl.elevator.umn.edu/asset/viewAsset/57e31b217d58ae5d4ce734f3#57e31c447d58ae793de734fa"
+            :details="[
+              'Frank Owen Gehry',
+              '1978',
+              'Architecture, Cultural / Educational, colleges / universities',
+            ]"
           />
-          <ThumbnailImage src="/gehry-residence.jpg" alt="Gehry Residence" />
-
-          <ThumbnailImage src="/gehry-residence.jpg" alt="Gehry Residence" />
-
-          <ThumbnailImage src="/gehry-residence.jpg" alt="Gehry Residence" />
+          <MediaCard
+            label="California Aerospace Museum and Theater"
+            image="/cal-aero-museum.jpg"
+            href="#"
+            :details="[
+              'Frank Owen Gehry',
+              '1982',
+              'Architecture, Cultural / Educational, museums',
+            ]"
+          />
         </div>
       </Drawer>
     </main>
@@ -215,14 +220,9 @@ import Chip from "./components/Chip.vue";
 import Accordion from "./components/Accordion.vue";
 import ThumbnailImage from "./components/ThumbnailImage.vue";
 import IconButton from "./components/IconButton.vue";
+import MediaCard from "./components/MediaCard.vue";
 
 function downloadImage(event: MouseEvent) {
   console.log("download");
 }
 </script>
-
-<style>
-.app__image-viewer {
-  min-width: 25vw;
-}
-</style>
