@@ -1,14 +1,10 @@
 <template>
   <div
-    class="drawer border-l-2 border-neutral-900 min-h-full flex min-w-0"
+    class="drawer border-l-2 border-neutral-900 min-h-full flex min-w-0 max-w-[25%]"
     :class="{
       'bg-neutral-50': color === 'light',
       'bg-neutral-300': color === 'gray',
       'drawer--color-dark bg-neutral-800': color === 'dark',
-      'max-w-[250px]': size === 'xs',
-      'max-w-sm': size === 'sm',
-      'max-w-md': size === 'md',
-      'max-w-lg': size === 'lg',
     }"
   >
     <header

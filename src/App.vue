@@ -3,7 +3,7 @@
     <UMNHeader class="app__umn-header" />
     <AppHeader class="app__app-header" />
     <main class="flex flex-1 min-h-0">
-      <ImageViewer class="app__image-viewer flex w-1/3">
+      <ImageViewer class="app__image-viewer flex flex-1 min-w-[25%]">
         <img
           src="/gehry-residence.jpg"
           alt="Man Looking Out Window. Print by Robert Gwathmey."
