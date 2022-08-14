@@ -1,6 +1,6 @@
 <template>
   <div
-    class="drawer border-l-2 border-neutral-900 min-h-full flex min-w-0 max-w-[25%]"
+    class="drawer border-l-2 border-neutral-900 min-h-full flex max-w-[25%]"
     :class="{
       'bg-neutral-50': color === 'light',
       'bg-neutral-300': color === 'gray',
@@ -67,7 +67,7 @@
       >
         {{ label }}
       </h1>
-      <div class="text-neutral-600">
+      <div class="text-neutral-600 flex flex-col gap-8">
         <slot />
       </div>
     </article>
