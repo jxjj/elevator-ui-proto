@@ -6,7 +6,7 @@
       <ImageViewer class="app__image-viewer sm:flex sm:flex-1 min-w-[25%]">
         <img
           src="/gehry-residence.jpg"
-          alt="Man Looking Out Window. Print by Robert Gwathmey."
+          alt="Gehry Residence"
           class="block object-cover w-full"
         />
       </ImageViewer>
