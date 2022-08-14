@@ -1,6 +1,6 @@
 <template>
   <div
-    class="accordion shadow-sm rounded-md overflow-hidden bg-neutral-100 border border-neutral-100 w-full"
+    class="accordion shadow-sm rounded-md overflow-hidden bg-neutral-100 border border-neutral-300 w-full"
   >
     <IconButton
       class="accordion__header flex w-full justify-start items-center p-4 gap-2 flex-row-reverse bg-neutral-200"
@@ -12,7 +12,7 @@
     </IconButton>
     <div
       v-if="isOpen"
-      class="accordion__panel px-4 py-2 border-t border-neutral-200"
+      class="accordion__panel px-4 py-4 border-t border-neutral-300 flex flex-col gap-6 pt-6"
     >
       <slot />
     </div>

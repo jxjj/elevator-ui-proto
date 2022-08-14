@@ -2,8 +2,8 @@
   <div class="app default-layout h-screen flex flex-col box-border">
     <UMNHeader class="app__umn-header" />
     <AppHeader class="app__app-header" />
-    <main class="flex flex-1 min-h-0">
-      <ImageViewer class="app__image-viewer flex flex-1 min-w-[25%]">
+    <main ref="mainEl" class="flex-1 min-h-0 sm:flex">
+      <ImageViewer class="app__image-viewer sm:flex sm:flex-1 min-w-[25%]">
         <img
           src="/gehry-residence.jpg"
           alt="Man Looking Out Window. Print by Robert Gwathmey."
@@ -14,6 +14,8 @@
         label="Object Details"
         :details="['Exterior', '1991', 'image', 'CSCL001875']"
         color="dark"
+        :is-open="isDrawerOpen.objectDetails"
+        @toggle="toggleDrawer('objectDetails')"
       >
         <Tuple label="Type of View">Exterior</Tuple>
         <Tuple label="Keywords" class="flex gap-1 flex-wrap mt-2">
@@ -74,6 +76,8 @@
           'Western: North America : North America : United States: 1945-Present : 1980s',
         ]"
         color="light"
+        :is-open="isDrawerOpen.primary"
+        @toggle="toggleDrawer('primary')"
       >
         <Tuple label="Creator">
           <Accordion label="Frank Owen Gehry">
@@ -183,6 +187,8 @@
         ]"
         color="gray"
         size="sm"
+        :is-open="isDrawerOpen.moreLikeThis"
+        @toggle="toggleDrawer('moreLikeThis')"
       >
         <div class="flex flex-col gap-2">
           <MediaCard
@@ -211,6 +217,8 @@
   </div>
 </template>
 <script setup lang="ts">
+import { reactive, ref } from "vue";
+import { useResizeObserver } from "@vueuse/core";
 import UMNHeader from "./components/UMNHeader.vue";
 import AppHeader from "./components/AppHeader.vue";
 import ImageViewer from "./components/ImageViewer.vue";
@@ -224,5 +232,59 @@ import MediaCard from "./components/MediaCard.vue";
 
 function downloadImage(event: MouseEvent) {
   console.log("download");
+}
+
+interface DrawerOpenState {
+  objectDetails: boolean;
+  moreLikeThis: boolean;
+  primary: boolean;
+}
+const isDrawerOpen = reactive<DrawerOpenState>({
+  moreLikeThis: false,
+  primary: false,
+  objectDetails: false,
+});
+
+const mainEl = ref<HTMLElement | null>(null);
+const maxOpenDrawers = ref(3);
+useResizeObserver(mainEl, (entries) => {
+  console.log("resize");
+  const entry = entries[0];
+  const { width } = entry.contentRect;
+
+  if (width >= 1024) {
+    maxOpenDrawers.value = 3;
+    return;
+  }
+
+  maxOpenDrawers.value = 1;
+  const openDrawerKeys = getOpenDrawerKeys();
+  if (openDrawerKeys.length > maxOpenDrawers.value) {
+    // close all open drawers but the first one
+    openDrawerKeys.slice(1).forEach((key) => {
+      isDrawerOpen[key as keyof DrawerOpenState] = false;
+    });
+  }
+});
+
+function getOpenDrawerKeys() {
+  return Object.keys(isDrawerOpen).filter(
+    (key) => isDrawerOpen[key as keyof DrawerOpenState]
+  );
+}
+
+function toggleDrawer(drawer: keyof DrawerOpenState) {
+  if (isDrawerOpen[drawer]) {
+    isDrawerOpen[drawer] = false;
+    return;
+  }
+
+  const openDrawers = getOpenDrawerKeys();
+
+  // if we're already at max drawers, we shut another open one first
+  if (openDrawers.length >= maxOpenDrawers.value) {
+    isDrawerOpen[openDrawers[0] as keyof DrawerOpenState] = false;
+  }
+  isDrawerOpen[drawer] = true;
 }
 </script>

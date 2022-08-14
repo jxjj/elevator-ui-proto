@@ -3,7 +3,7 @@
     :is="href ? 'a' : 'button'"
     :href="href"
     :title="label"
-    class="inline-flex items-center"
+    class="inline-flex items-center gap-2 no-underline hover:no-underline"
   >
     <span
       class="material-symbols-outlined"
