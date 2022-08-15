@@ -4,6 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        umn: {
+          maroon: "#7a0019",
+          "maroon-light": "#900021",
+          "maroon-dark": "#5b0013",
+          gold: "#ffcc33",
+          "gold-light": "#ffde7a",
+          "gold-dark": "#ffb71e",
+        },
         transparent: {
           black: {
             50: "rgba(0, 0, 0, 0.04)",

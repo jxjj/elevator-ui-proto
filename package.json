@@ -12,6 +12,7 @@
   "dependencies": {
     "@vueuse/core": "^9.1.0",
     "vue": "^3.2.37",
+    "vue-demi": "^0.13.7",
     "vue-router": "4"
   },
   "devDependencies": {

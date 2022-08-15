@@ -20,12 +20,14 @@ specifiers:
   typescript: ^4.6.4
   vite: ^3.0.7
   vue: ^3.2.37
+  vue-demi: ^0.13.7
   vue-router: '4'
   vue-tsc: ^0.39.5
 
 dependencies:
   '@vueuse/core': 9.1.0_vue@3.2.37
   vue: 3.2.37
+  vue-demi: 0.13.7_vue@3.2.37
   vue-router: 4.1.3_vue@3.2.37
 
 devDependencies:
