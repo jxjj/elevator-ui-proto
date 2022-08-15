@@ -2,7 +2,8 @@
   <div
     class="tuple w-full"
     :class="{
-      'grid grid-cols-3 justify-start items-baseline': variant === 'inline',
+      'max-w-lg grid grid-cols-3 justify-start items-baseline':
+        variant === 'inline',
     }"
   >
     <span

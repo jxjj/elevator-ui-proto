@@ -8,7 +8,7 @@
     }"
   >
     <header
-      class="sideways hidden sm:flex gap-4 items-center justify-start p-2 whitespace-nowrap cursor-pointer bg-transparent-black-100"
+      class="sideways hidden sm:flex gap-4 items-center justify-start p-2 2xl:px-4 whitespace-nowrap cursor-pointer bg-transparent-black-100"
       :class="{
         invert: color === 'dark',
       }"
@@ -59,14 +59,15 @@
         'sm:hidden': !isOpen,
       }"
     >
-      <h1
+      <SectionHeading>{{ label }}</SectionHeading>
+      <!-- <h1
         class="mt-8 text-3xl font-bold mb-12 text-neutral-900 relative before:block before:w-12 before:h-1 before:bg-neutral-900 before:absolute before:top-0 pt-6"
         :class="{
           'text-lg before:hidden mt-0 mb-2': size === 'xs',
         }"
       >
         {{ label }}
-      </h1>
+      </h1> -->
       <div class="text-neutral-600 flex flex-col gap-8">
         <slot />
       </div>
@@ -74,6 +75,8 @@
   </div>
 </template>
 <script setup lang="ts">
+import SectionHeading from "./SectionHeading.vue";
+
 withDefaults(
   defineProps<{
     isOpen: boolean;

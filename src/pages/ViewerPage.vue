@@ -1,5 +1,5 @@
 <template>
-  <DefaultLayout>
+  <DefaultLayout ref="mainEl">
     <div class="min-h-0 sm:flex max-h-full">
       <ImageViewer class="app__image-viewer sm:flex sm:flex-1 min-w-[25%]">
         <img

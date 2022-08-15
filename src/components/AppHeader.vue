@@ -7,13 +7,12 @@
       <nav>
         <ul class="flex gap-2">
           <li>
-            <RouterLink to="/" class="p-4">Home</RouterLink>
+            <RouterLink to="/viewer" class="p-4">Viewer Page</RouterLink>
           </li>
           <li>
-            <RouterLink to="/viewer" class="p-4">Viewer</RouterLink>
-          </li>
-          <li>
-            <a href="#" class="p-4">Link</a>
+            <RouterLink to="/meta-data-only" class="p-4"
+              >Meta Data Only</RouterLink
+            >
           </li>
         </ul>
       </nav>
