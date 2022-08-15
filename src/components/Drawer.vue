@@ -60,7 +60,7 @@
       }"
     >
       <h1
-        class="mt-8 text-3xl font-bold mb-12 text-neutral-900 relative before:block before:w-12 before:h-2 before:bg-neutral-900 before:absolute before:bottom-0 pb-8"
+        class="mt-8 text-3xl font-bold mb-12 text-neutral-900 relative before:block before:w-12 before:h-1 before:bg-neutral-900 before:absolute before:top-0 pt-6"
         :class="{
           'text-lg before:hidden mt-0 mb-2': size === 'xs',
         }"
