@@ -2,7 +2,9 @@
   <div class="app-header bg-neutral-100 border-y border-neutral-200">
     <div class="flex justify-between max-w-[90rem] mx-auto p-4 items-center">
       <h2 class="text-xl">
-        <router-link to="/" class="text-neutral-800">Elevator</router-link>
+        <router-link to="/" class="text-neutral-800 uppercase font-bold"
+          >Digital Content Library</router-link
+        >
       </h2>
       <nav>
         <ul class="flex gap-2">
