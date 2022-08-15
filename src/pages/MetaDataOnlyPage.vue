@@ -14,6 +14,21 @@
           <Tuple label="Country of Birth" variant="inline">Canada</Tuple>
           <Tuple label="Country Active" variant="inline">United States</Tuple>
           <Tuple label="Nationality" variant="inline">American, Canadian</Tuple>
+          <Tuple label="Description" variant="inline">
+            <p>
+              Frank Owen Gehry, CC, FAIA is a Canadian-born American architect
+              and designer. A number of his buildings, including his private
+              residence in Santa Monica, California, have become world-renowned
+              attractions.
+            </p>
+
+            <p>
+              His works are considered among the most important of contemporary
+              architecture in the
+              <a href="#">2010 World Architecture Survey</a>, leading Vanity
+              Fair to call him "the most important architect of our age".
+            </p>
+          </Tuple>
         </article>
       </div>
 
