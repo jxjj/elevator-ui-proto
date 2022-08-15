@@ -11,7 +11,6 @@
   </div>
 </template>
 <script setup lang="ts">
-import CollegeHeader from "@/components/CollegeHeader.vue";
 import UniversityHeader from "@/cla-vue-template/src/components/UniversityHeader.vue";
 import AppHeader from "@/components/AppHeader.vue";
 import "../cla-vue-template/src/index.css";
