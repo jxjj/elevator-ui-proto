@@ -2,12 +2,15 @@
   <div
     class="tuple w-full"
     :class="{
-      'max-w-lg grid grid-cols-3 justify-start items-baseline':
+      'max-w-lg grid grid-cols-3 justify-start items-baseline gap-4':
         variant === 'inline',
     }"
   >
     <span
       class="tuple__label text-xs block uppercase text-neutral-500 leading-none mb-1"
+      :class="{
+        'text-right': variant === 'inline',
+      }"
       >{{ label }}</span
     >
     <span
