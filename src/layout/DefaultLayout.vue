@@ -1,6 +1,6 @@
 <template>
   <div
-    class="app default-layout h-screen flex flex-col box-border bg-neutral-50"
+    class="app default-layout h-screen flex flex-col box-border bg-neutral-50 europa"
   >
     <UniversityHeader class="umn-header border-t-[6px] border-umn-gold" />
     <AppHeader />

@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+.proxima {
+  font-family: proxima-nova, sans-serif;
+}
+
+.work-sans {
+  font-family: work-sans, sans-serif;
+}
+
+.century-gothic {
+  font-family: century-gothic, sans-serif;
+}
+
+.neue-haas-unica {
+  font-family: neue-haas-unica, sans-serif;
+}
+
+.europa {
+  font-family: europa, sans-serif;
+}
+
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }

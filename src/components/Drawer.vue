@@ -1,6 +1,6 @@
 <template>
   <div
-    class="drawer border-l-2 border-neutral-900 min-h-full flex sm:max-w-[50%] md:max-w-[33%] lg:max-w-[25%]"
+    class="drawer min-h-full flex sm:max-w-[50%] md:max-w-[33%] lg:max-w-[25%]"
     :class="{
       'bg-neutral-50': color === 'light',
       'bg-neutral-300': color === 'gray',
@@ -8,7 +8,7 @@
     }"
   >
     <header
-      class="sideways hidden sm:flex gap-4 items-center justify-start p-2 2xl:px-4 whitespace-nowrap cursor-pointer bg-transparent-black-100"
+      class="sideways hidden sm:flex gap-8 items-center justify-start p-2 2xl:px-4 whitespace-nowrap cursor-pointer bg-transparent-black-100"
       :class="{
         invert: color === 'dark',
       }"
@@ -35,7 +35,7 @@
             />
           </svg>
         </div>
-        <h1 class="font-bold">
+        <h1 class="font-bold uppercase tracking-wider">
           {{ label }}
         </h1>
       </div>

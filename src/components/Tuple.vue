@@ -7,7 +7,7 @@
     }"
   >
     <span
-      class="tuple__label text-xs block uppercase text-neutral-500 leading-none mb-1"
+      class="tuple__label text-xs block uppercase font-bold leading-none mb-1 tracking-wide"
       :class="{
         'text-right': variant === 'inline',
       }"

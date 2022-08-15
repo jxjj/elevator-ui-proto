@@ -1,6 +1,6 @@
 <template>
   <div
-    class="accordion shadow-sm rounded-md overflow-hidden bg-neutral-100 border border-neutral-300 w-full"
+    class="accordion rounded-md overflow-hidden bg-neutral-100 border w-full mt-2"
   >
     <IconButton
       class="accordion__header flex w-full justify-start items-center p-4 gap-2 flex-row-reverse bg-neutral-200"
