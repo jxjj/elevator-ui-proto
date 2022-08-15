@@ -5,10 +5,10 @@
       <nav>
         <ul class="flex gap-4">
           <li>
-            <a href="#">Home</a>
+            <RouterLink to="/">Home</RouterLink>
           </li>
           <li>
-            <a href="#">Link</a>
+            <RouterLink to="/viewer">Viewer</RouterLink>
           </li>
           <li>
             <a href="#">Link</a>

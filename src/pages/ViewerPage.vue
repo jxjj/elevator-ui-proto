@@ -1,8 +1,6 @@
 <template>
-  <div class="app default-layout h-screen flex flex-col box-border">
-    <UMNHeader class="app__umn-header" />
-    <AppHeader class="app__app-header" />
-    <main ref="mainEl" class="flex-1 min-h-0 sm:flex">
+  <DefaultLayout>
+    <div class="min-h-0 sm:flex max-h-full">
       <ImageViewer class="app__image-viewer sm:flex sm:flex-1 min-w-[25%]">
         <img
           src="/gehry-residence.jpg"
@@ -213,8 +211,8 @@
           />
         </div>
       </Drawer>
-    </main>
-  </div>
+    </div>
+  </DefaultLayout>
 </template>
 <script setup lang="ts">
 import { reactive, ref } from "vue";
@@ -229,6 +227,7 @@ import Accordion from "@/components/Accordion.vue";
 import ThumbnailImage from "@/components/ThumbnailImage.vue";
 import IconButton from "@/components/IconButton.vue";
 import MediaCard from "@/components/MediaCard.vue";
+import DefaultLayout from "@/layout/DefaultLayout.vue";
 
 function downloadImage(event: MouseEvent) {
   console.log("download");

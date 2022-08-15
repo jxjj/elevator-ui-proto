@@ -1,5 +1,11 @@
 <template>
-  <h1>Home</h1>
+  <DefaultLayout>
+    <div class="container mx-auto py-4">
+      <h1>Homepage</h1>
+    </div>
+  </DefaultLayout>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import DefaultLayout from "@/layout/DefaultLayout.vue";
+</script>
 <style scoped></style>
