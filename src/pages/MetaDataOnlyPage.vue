@@ -7,7 +7,7 @@
         >
           <SectionHeading class="!text-4xl">Frank Owen Gehry</SectionHeading>
 
-          <Tuple label="Altnernate Name" variant="inline"
+          <Tuple label="Alternate Name" variant="inline"
             >Frank O. Gehry; Frank Goldberg</Tuple
           >
           <Tuple label="Birth Date" variant="inline">1929</Tuple>
