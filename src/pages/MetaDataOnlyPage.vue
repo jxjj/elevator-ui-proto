@@ -63,7 +63,7 @@
         <div class="flex flex-col gap-2">
           <MediaCard
             label="Loyola Law School"
-            image="/loyola-law-school.jpg"
+            image="https://github.com/jxjj/elevator-ui-proto/blob/main/public/loyola-law-school.jpg?raw=true"
             href="https://dcl.elevator.umn.edu/asset/viewAsset/57e31b217d58ae5d4ce734f3#57e31c447d58ae793de734fa"
             :details="[
               'Frank Owen Gehry',
@@ -73,7 +73,7 @@
           />
           <MediaCard
             label="California Aerospace Museum and Theater"
-            image="/cal-aero-museum.jpg"
+            image="https://github.com/jxjj/elevator-ui-proto/blob/main/public/cal-aero-museum.jpg?raw=true"
             href="#"
             :details="[
               'Frank Owen Gehry',
