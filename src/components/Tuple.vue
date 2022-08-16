@@ -7,7 +7,7 @@
     }"
   >
     <span
-      class="tuple__label text-xs block uppercase font-bold leading-none mb-1 tracking-wide"
+      class="tuple__label text-xs block uppercase font-bold text-neutral-900 leading-none mb-1 tracking-wide"
       :class="{
         'text-right': variant === 'inline',
       }"
@@ -36,7 +36,6 @@ withDefaults(
 );
 </script>
 <script lang="ts">
-// use normal <script> to declare options
 export default {
   inheritAttrs: false,
 };

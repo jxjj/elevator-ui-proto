@@ -10,13 +10,6 @@
         <li v-for="(item, i) in details" :key="i">{{ item }}</li>
       </ul>
       <div class="flex justify-end items-center my-2">
-        <!-- <IconButton
-          class="flex"
-          :label="showAllDetails ? 'Show Less' : 'Show More'"
-          :icon="showAllDetails ? 'unfold_less' : 'unfold_more'"
-          @click="showAllDetails = !showAllDetails"
-        /> -->
-
         <IconButton
           :href="href"
           label="Read More"
